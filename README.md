@@ -5,8 +5,8 @@
 
 vue slide list component. vue 滑动列表组件
 <div  align="center">    
-    <img src="https://github.com/Jon-Millent/vue-swiper-layout/blob/master/show01.gif" width="50%" />
-    <img src="https://github.com/Jon-Millent/vue-swiper-layout/blob/master/show02.gif" width="50%" />
+    <img src="https://github.com/Jon-Millent/vue-swiper-layout/blob/master/show01.gif" width="40%" />
+    <img src="https://github.com/Jon-Millent/vue-swiper-layout/blob/master/show02.gif" width="40%" />
 </div>
 
 
