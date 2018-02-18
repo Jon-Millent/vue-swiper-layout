@@ -4,6 +4,12 @@
 [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 
 vue slide list component. vue 滑动列表组件
+<div  align="center">    
+    <img src="https://github.com/Jon-Millent/vue-swiper-layout/blob/master/show01.gif" width="30%" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="https://github.com/Jon-Millent/vue-swiper-layout/blob/master/show02.gif" width="30%" />
+</div>
+
 
 
 ## 安装
@@ -100,11 +106,12 @@ export default {
 ### 1.关于样式
 本组件为提供任何样式，请根据需求自行定义样式
 ### 2.用 `v-for` 循环，如何删除本组件？ 
-推荐使用 `v-if` 动态删除本组件，例如下面代码
+推荐使用 `v-if` 动态删除本组件，实例代码
 ```vue
 <template>
   <div>
     <swiper-layout-box class="my-layout">
+    
       <swiper-layout 
       v-for="(target, index) in list" 
       v-if="target.isAlive" 
@@ -113,6 +120,7 @@ export default {
       :type="target.type" 
       menuHeight="60px" 
       :menuWidth="target.width || '100%'">
+      
         <template slot="content">
           <span>{{target.name}}</span>
           <span class="gury">{{target.tel}}</span>
@@ -121,10 +129,13 @@ export default {
           <div class="menu-item">编辑</div>
           <div class="menu-item" @click="deletes(target, index)">删除</div>
         </template>
+        
       </swiper-layout>
+      
     </swiper-layout-box>
   </div>
 </template>
+
 <script type="text/ecmascript-6">
   import { swiperLayout, swiperLayoutBox }  from 'vue-swiper-layout'
 
@@ -161,6 +172,39 @@ export default {
     }
   }
 </script>
+
+<style type="text/css">
+  html, body{
+    padding: 0;
+    margin: 0;
+  }
+  .my-layout .swiper-layout-parent .swiper-slide{
+    border: none;
+    line-height: 60px;
+  }
+  .my-layout .swiper-layout-parent .swiper-slide.content{
+    padding-left: 20px;
+  }
+  .my-layout .swiper-layout-item{
+    border: none;
+    border-bottom: 1px solid #EAEAEB;
+  }
+  .gury{
+    color: #ccc;
+  }
+  .my-layout .before-menu .menu-item{
+    width: 50%;
+    float: left;
+    text-align: center;
+    color: #fff;
+  }
+  .my-layout .before-menu .menu-item:nth-of-type(1){
+    background-color: #FF9C00;
+  }
+  .my-layout .before-menu .menu-item:nth-of-type(2){
+    background-color: #FF3B30;
+  }
+</style>
 ```
 
 ## License
