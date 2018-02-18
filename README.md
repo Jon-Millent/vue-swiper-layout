@@ -96,7 +96,67 @@ export default {
     </tr>
 </table>
 
+## 注意
 
+### 关于样式
+本组件为提供任何样式，请根据需求自行定义样式
+
+### 用 `v-for` 循环，如何删除本组件？ 
+推荐使用 `v-if` 动态删除本组件
+```vue
+<template>
+  <div>
+    <swiper-layout-box class="my-layout">
+      <swiper-layout v-for="(target, index) in list" v-if="target.isAlive" :key="index" @offset="deletes(target, index)" :type="target.type" menuHeight="60px" :menuWidth="target.width || '100%'">
+        <template slot="content">
+          <span>{{target.name}}</span>
+          <span class="gury">{{target.tel}}</span>
+        </template>
+        <template slot="menu">
+          <div class="menu-item">编辑</div>
+          <div class="menu-item" @click="deletes(target, index)">删除</div>
+        </template>
+      </swiper-layout>
+    </swiper-layout-box>
+  </div>
+</template>
+<script type="text/ecmascript-6">
+  import { swiperLayout, swiperLayoutBox }  from 'vue-swiper-layout'
+
+  export default {
+    name: 'hello',
+    data(){
+      return {
+        list: [
+          {
+            name: '联系人0017',
+            tel: '13241269845xxxxx',
+            type: 'right',
+            width: '40%',
+            isAlive: true
+          },
+          {
+            name: '联系人0018',
+            tel: '13241269845xxxxx',
+            type: 'right',
+            width: '40%',
+            isAlive: true
+          }
+        ]
+      }
+    },
+    components: {
+      swiperLayout,
+      swiperLayoutBox
+    },
+    methods: {
+      deletes(target, index) {
+        target.isAlive = false
+      }
+    }
+  }
+</script>
+```
 
 ## License
 
