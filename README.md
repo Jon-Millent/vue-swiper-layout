@@ -111,6 +111,7 @@ export default {
 <template>
   <div>
     <swiper-layout-box class="my-layout">
+    
       <swiper-layout 
       v-for="(target, index) in list" 
       v-if="target.isAlive" 
@@ -119,6 +120,7 @@ export default {
       :type="target.type" 
       menuHeight="60px" 
       :menuWidth="target.width || '100%'">
+      
         <template slot="content">
           <span>{{target.name}}</span>
           <span class="gury">{{target.tel}}</span>
@@ -127,10 +129,13 @@ export default {
           <div class="menu-item">编辑</div>
           <div class="menu-item" @click="deletes(target, index)">删除</div>
         </template>
+        
       </swiper-layout>
+      
     </swiper-layout-box>
   </div>
 </template>
+
 <script type="text/ecmascript-6">
   import { swiperLayout, swiperLayoutBox }  from 'vue-swiper-layout'
 
@@ -167,6 +172,7 @@ export default {
     }
   }
 </script>
+
 <style type="text/css">
   html, body{
     padding: 0;
@@ -186,8 +192,6 @@ export default {
   .gury{
     color: #ccc;
   }
-
-
   .my-layout .before-menu .menu-item{
     width: 50%;
     float: left;
