@@ -36,6 +36,28 @@ export default {
 }
 
 ```
+
+```html
+<swiper-layout-box>
+  <swiper-layout 
+                type="right" 
+                menuHeight="60px" 
+                menuWidth="40%"
+                :swiperConfig="config"
+                @offset="offsetEvent"
+                offsetNumber="120">
+    <template slot="content">
+      <span>列表内容</span>
+    </template>
+    <template slot="menu">
+      <span class="menu-item">功能菜单</span>
+    </template>
+  </swiper-layout>
+</swiper-layout-box>
+```
+
+
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
