@@ -106,7 +106,7 @@ export default {
 ### 1.关于样式
 本组件为提供任何样式，请根据需求自行定义样式
 ### 2.用 `v-for` 循环，如何删除本组件？ 
-推荐使用 `v-if` 动态删除本组件，例如下面代码
+推荐使用 `v-if` 动态删除本组件，实例代码
 ```vue
 <template>
   <div>
@@ -167,6 +167,40 @@ export default {
     }
   }
 </script>
+<style type="text/css">
+  html, body{
+    padding: 0;
+    margin: 0;
+  }
+  .my-layout .swiper-layout-parent .swiper-slide{
+    border: none;
+    line-height: 60px;
+  }
+  .my-layout .swiper-layout-parent .swiper-slide.content{
+    padding-left: 20px;
+  }
+  .my-layout .swiper-layout-item{
+    border: none;
+    border-bottom: 1px solid #EAEAEB;
+  }
+  .gury{
+    color: #ccc;
+  }
+
+
+  .my-layout .before-menu .menu-item{
+    width: 50%;
+    float: left;
+    text-align: center;
+    color: #fff;
+  }
+  .my-layout .before-menu .menu-item:nth-of-type(1){
+    background-color: #FF9C00;
+  }
+  .my-layout .before-menu .menu-item:nth-of-type(2){
+    background-color: #FF3B30;
+  }
+</style>
 ```
 
 ## License
