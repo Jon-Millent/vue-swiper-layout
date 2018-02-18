@@ -83,9 +83,9 @@ export default {
         <th>http://3.swiper.com.cn/api/index.html</th>
     </tr>
     <tr>
-        <th>offset</th>
+        <th>@offset</th>
         <th>当滑动到菜单页，在继续滑动会触发offset事件</th>
-        <th>@</th>
+        <th>/</th>
         <th>/</th>
     </tr>
     <tr>
