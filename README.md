@@ -72,7 +72,7 @@ export default {
     </tr>
     <tr>
         <th>menuHeight</th>
-        <th>整个列表的高度</th>
+        <th>整个列表的高度，当type为top或者bottom时候需要配置本参数</th>
         <th>String</th>
         <th>例如： 50px</th>
     </tr>
@@ -107,7 +107,14 @@ export default {
 <template>
   <div>
     <swiper-layout-box class="my-layout">
-      <swiper-layout v-for="(target, index) in list" v-if="target.isAlive" :key="index" @offset="deletes(target, index)" :type="target.type" menuHeight="60px" :menuWidth="target.width || '100%'">
+      <swiper-layout 
+      v-for="(target, index) in list" 
+      v-if="target.isAlive" 
+      :key="index" 
+      @offset="deletes(target, index)" 
+      :type="target.type" 
+      menuHeight="60px" 
+      :menuWidth="target.width || '100%'">
         <template slot="content">
           <span>{{target.name}}</span>
           <span class="gury">{{target.tel}}</span>
