@@ -10,6 +10,10 @@ vue slide list component. vue 滑动列表组件
     <img src="https://github.com/Jon-Millent/vue-swiper-layout/blob/master/show02.gif" width="30%" />
 </div>
 
+<div  align="center">  
+    <p>demo</p>
+    <img src="https://qr.api.cli.im/qr?data=http%253A%252F%252Fshow.thisummer.com%252Fvue-swiper-layout-demo%252F%2523%252F&level=H&transparent=false&bgcolor=%23ffffff&forecolor=%23000000&blockpixel=12&marginblock=1&logourl=&size=280&kid=cliim&key=a21055d6a420b8916fa5c887ead61632" width="30%" />
+</div> 
 
 
 ## 安装
