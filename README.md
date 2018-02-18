@@ -4,9 +4,11 @@
 [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 
 vue slide list component. vue 滑动列表组件
+<div  align="center">    
+    <img src="https://github.com/Jon-Millent/vue-swiper-layout/blob/master/show01.gif" width="50%" />
+    <img src="https://github.com/Jon-Millent/vue-swiper-layout/blob/master/show02.gif" width="50%" />
+</div>
 
-<img src="https://github.com/Jon-Millent/vue-swiper-layout/blob/master/show01.gif" width="50%" />
-<img src="https://github.com/Jon-Millent/vue-swiper-layout/blob/master/show02.gif" width="50%" />
 
 
 ## 安装
