@@ -1,4 +1,11 @@
-# vue-swiper-layout
+# vue-swiper-layout  
+
+
+<a href="https://github.com/Jon-Millent/vue-swiper-layout/blob/master/README.md">中文</a>
+|
+<a href="https://github.com/Jon-Millent/vue-swiper-layout/blob/master/en.MD">English</a>  
+
+
 
 [![npm](https://img.shields.io/npm/v/vue-swiper-layout.svg) ![npm](https://img.shields.io/npm/dm/vue-swiper-layout.svg)](https://www.npmjs.com/package/vue-swiper-layout)
 [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
@@ -109,7 +116,7 @@ export default {
 
 ## 问题
 ### 1.关于样式
-本组件为提供任何样式，请根据需求自行定义样式
+本组件未提供任何样式，请根据需求自行定义样式
 ### 2.用 `v-for` 循环，如何删除本组件？ 
 推荐使用 `v-if` 动态删除本组件，实例代码
 ```vue
