@@ -82,12 +82,20 @@ export default {
         <th>Object</th>
         <th>http://3.swiper.com.cn/api/index.html</th>
     </tr>
+    <tr>
+        <th>offset</th>
+        <th>当滑动到菜单页，在继续滑动会触发offset事件</th>
+        <th>@</th>
+        <th>/</th>
+    </tr>
+    <tr>
+        <th>offsetNumber</th>
+        <th>当滑动到菜单页，设置再滑动多少距离触发offset事件，单位px</th>
+        <th>Number</th>
+        <th>默认：120px</th>
+    </tr>
 </table>
 
-作者：Gaolex
-链接：https://www.jianshu.com/p/abaff828100d
-來源：简书
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 
 ## License
