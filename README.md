@@ -62,21 +62,25 @@ export default {
         <th>属性名</th>
         <th>说明</th>
         <th>类型</th>
+        <th>值</th>
     </tr>
     <tr>
-        <th>键盘</th>
-        <th>/dev/stdin</th>
-        <th>0</th>
+        <th>type</th>
+        <th>菜单滑动的方式</th>
+        <th>String</th>
+        <th>right | left | top | bottom</th>
     </tr>
     <tr>
-        <th>显示器</th>
-        <th>/dev/stdout</th>
-        <th>1</th>
+        <th>menuHeight</th>
+        <th>整个列表的高度</th>
+        <th>String</th>
+        <th>例如： 50px</th>
     </tr>
     <tr>
-        <th>显示器</th>
-        <th>/dev/stderr</th>
-        <th>2</th>
+        <th>swiperConfig</th>
+        <th>本组件基于swiper3.4.2，详细配置见官方文档</th>
+        <th>Object</th>
+        <th>http://3.swiper.com.cn/api/index.html</th>
     </tr>
 </table>
 
