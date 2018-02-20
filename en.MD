@@ -59,6 +59,7 @@ export default {
     
   <swiper-layout
                 type="right" 
+                v-model="open"
                 menuHeight="60px" 
                 menuWidth="40%"
                 :swiperConfig="config"
@@ -86,6 +87,12 @@ export default {
         <th>Menu sliding way</th>
         <th>String</th>
         <th>right | left | top | bottom</th>
+    </tr>
+    <tr>
+        <th>v-model</th>
+        <th>The menu is open</th>
+        <th>Boolean</th>
+        <th>true : open, false : close</th>
     </tr>
     <tr>
         <th>menuHeight</th>
@@ -117,106 +124,9 @@ export default {
 ### 1.About style
 This component does not provide any style, please customize the style according to your needs
 ### 2.With `v-for` loop, how to delete this component?
-It is recommended to use `v-if` to dynamically delete this component, instance code
-```vue
-<template>
-  <div>
-    <swiper-layout-box class="my-layout">
-    
-      <swiper-layout 
-      v-for="(target, index) in list" 
-      v-if="target.isAlive" 
-      :key="index" 
-      @offset="deletes(target, index)" 
-      :type="target.type" 
-      menuHeight="60px" 
-      :menuWidth="target.width || '100%'">
-      
-        <template slot="content">
-          <span>{{target.name}}</span>
-          <span class="gury">{{target.tel}}</span>
-        </template>
-        <template slot="menu">
-          <div class="menu-item">编辑</div>
-          <div class="menu-item" @click="deletes(target, index)">删除</div>
-        </template>
-        
-      </swiper-layout>
-      
-    </swiper-layout-box>
-  </div>
-</template>
-
-<script type="text/ecmascript-6">
-  import { swiperLayout, swiperLayoutBox }  from 'vue-swiper-layout'
-
-  export default {
-    name: 'hello',
-    data(){
-      return {
-        list: [
-          {
-            name: '联系人0017',
-            tel: '13241269845xxxxx',
-            type: 'right',
-            width: '40%',
-            isAlive: true
-          },
-          {
-            name: '联系人0018',
-            tel: '13241269845xxxxx',
-            type: 'right',
-            width: '40%',
-            isAlive: true
-          }
-        ]
-      }
-    },
-    components: {
-      swiperLayout,
-      swiperLayoutBox
-    },
-    methods: {
-      deletes(target, index) {
-        target.isAlive = false
-      }
-    }
-  }
-</script>
-
-<style type="text/css">
-  html, body{
-    padding: 0;
-    margin: 0;
-  }
-  .my-layout .swiper-layout-parent .swiper-slide{
-    border: none;
-    line-height: 60px;
-  }
-  .my-layout .swiper-layout-parent .swiper-slide.content{
-    padding-left: 20px;
-  }
-  .my-layout .swiper-layout-item{
-    border: none;
-    border-bottom: 1px solid #EAEAEB;
-  }
-  .gury{
-    color: #ccc;
-  }
-  .my-layout .before-menu .menu-item{
-    width: 50%;
-    float: left;
-    text-align: center;
-    color: #fff;
-  }
-  .my-layout .before-menu .menu-item:nth-of-type(1){
-    background-color: #FF9C00;
-  }
-  .my-layout .before-menu .menu-item:nth-of-type(2){
-    background-color: #FF3B30;
-  }
-</style>
-```
+It is recommended to use `v-if` to dynamically delete this component, instance code at `/test/test01.vue`
+### 3.How to close other menus when a menu is open？ 
+See example code at `/test/test02.vue`
 
 ## License
 

@@ -60,6 +60,7 @@ export default {
     
   <swiper-layout
                 type="right" 
+                v-model="open"
                 menuHeight="60px" 
                 menuWidth="40%"
                 :swiperConfig="config"
@@ -87,6 +88,12 @@ export default {
         <th>菜单滑动的方式</th>
         <th>String</th>
         <th>right | left | top | bottom</th>
+    </tr>
+    <tr>
+        <th>v-model</th>
+        <th>菜单是否打开</th>
+        <th>Boolean</th>
+        <th>true 菜单打开， false 菜单关闭</th>
     </tr>
     <tr>
         <th>menuHeight</th>
@@ -118,106 +125,10 @@ export default {
 ### 1.关于样式
 本组件未提供任何样式，请根据需求自行定义样式
 ### 2.用 `v-for` 循环，如何删除本组件？ 
-推荐使用 `v-if` 动态删除本组件，实例代码
-```vue
-<template>
-  <div>
-    <swiper-layout-box class="my-layout">
-    
-      <swiper-layout 
-      v-for="(target, index) in list" 
-      v-if="target.isAlive" 
-      :key="index" 
-      @offset="deletes(target, index)" 
-      :type="target.type" 
-      menuHeight="60px" 
-      :menuWidth="target.width || '100%'">
-      
-        <template slot="content">
-          <span>{{target.name}}</span>
-          <span class="gury">{{target.tel}}</span>
-        </template>
-        <template slot="menu">
-          <div class="menu-item">编辑</div>
-          <div class="menu-item" @click="deletes(target, index)">删除</div>
-        </template>
-        
-      </swiper-layout>
-      
-    </swiper-layout-box>
-  </div>
-</template>
+推荐使用 `v-if` 动态删除本组件，实例代码见 `/test/test01.vue`
 
-<script type="text/ecmascript-6">
-  import { swiperLayout, swiperLayoutBox }  from 'vue-swiper-layout'
-
-  export default {
-    name: 'hello',
-    data(){
-      return {
-        list: [
-          {
-            name: '联系人0017',
-            tel: '13241269845xxxxx',
-            type: 'right',
-            width: '40%',
-            isAlive: true
-          },
-          {
-            name: '联系人0018',
-            tel: '13241269845xxxxx',
-            type: 'right',
-            width: '40%',
-            isAlive: true
-          }
-        ]
-      }
-    },
-    components: {
-      swiperLayout,
-      swiperLayoutBox
-    },
-    methods: {
-      deletes(target, index) {
-        target.isAlive = false
-      }
-    }
-  }
-</script>
-
-<style type="text/css">
-  html, body{
-    padding: 0;
-    margin: 0;
-  }
-  .my-layout .swiper-layout-parent .swiper-slide{
-    border: none;
-    line-height: 60px;
-  }
-  .my-layout .swiper-layout-parent .swiper-slide.content{
-    padding-left: 20px;
-  }
-  .my-layout .swiper-layout-item{
-    border: none;
-    border-bottom: 1px solid #EAEAEB;
-  }
-  .gury{
-    color: #ccc;
-  }
-  .my-layout .before-menu .menu-item{
-    width: 50%;
-    float: left;
-    text-align: center;
-    color: #fff;
-  }
-  .my-layout .before-menu .menu-item:nth-of-type(1){
-    background-color: #FF9C00;
-  }
-  .my-layout .before-menu .menu-item:nth-of-type(2){
-    background-color: #FF3B30;
-  }
-</style>
-```
+### 3.当一个菜单打开的时候怎么关闭其他菜单？ 
+实例代码见 `/test/test02.vue`
 
 ## License
 
