@@ -13,7 +13,7 @@
 vue slide list component. vue 滑动列表组件
 <div  align="center">    
     <img src="https://wx2.sinaimg.cn/mw690/005v5x0Lly1fomp7j7qxgg30cg0m3qk1.gif" width="30%" />
-    &nbsp;&nbsp&nbsp;nbsp;&nbsp;
+    &nbsp;&nbsp&nbsp;&nbsp;&nbsp;
     <img src="https://qr.api.cli.im/qr?data=http%253A%252F%252Fshow.thisummer.com%252Fvue-swiper-layout-demo%252F%2523%252F&level=H&transparent=false&bgcolor=%23ffffff&forecolor=%23000000&blockpixel=12&marginblock=1&logourl=&size=280&kid=cliim&key=a21055d6a420b8916fa5c887ead61632" width="30%"/>
 </div>
 
