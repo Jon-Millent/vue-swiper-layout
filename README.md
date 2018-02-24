@@ -85,7 +85,7 @@ export default {
     </tr>
     <tr>
         <th>v-model</th>
-        <th>菜单是否打开</th>
+        <th>菜单是否打开(必须绑定v-model)</th>
         <th>Boolean</th>
         <th>true 菜单打开， false 菜单关闭</th>
     </tr>
