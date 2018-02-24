@@ -124,6 +124,9 @@ export default {
 ### 3.当一个菜单打开的时候怎么关闭其他菜单？ 
 实例代码见 `/test/test02.vue`
 
+## 更新
+* v1.0.9 解决了当 type = right 时候的滑动用户体验不好，和异常删除问题
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)

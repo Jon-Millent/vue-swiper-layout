@@ -1,7 +1,7 @@
 {
   "name": "vue-swiper-layout",
   "description": "vue slide list component. vue 滑动列表组件",
-  "version": "1.0.6",
+  "version": "1.0.9",
   "author": {
     "name": "hsh",
     "email": "millent@126.com"
