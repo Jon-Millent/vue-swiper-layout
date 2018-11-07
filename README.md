@@ -1,5 +1,7 @@
 # vue-swiper-layout  
 
+## 注意
+本项目已经不再维护，项目已经迁移到 <a href="https://github.com/sunflower-ui/sunflower">sunflower-ui</a>
 
 <a href="https://github.com/Jon-Millent/vue-swiper-layout/blob/master/README.md">中文</a>
 |
